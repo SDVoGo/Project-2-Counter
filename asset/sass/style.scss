@@ -1,0 +1,70 @@
+$plus-font-color: #02a902;
+$minus-font-color: red;
+$reload-icon-color: rgb(0, 140, 255);
+$rotation-time: 3s;
+
+@keyframes rotate {
+    0%      {transform: rotate(0deg);
+             color: black;}
+    50%     {color: $reload-icon-color;}
+    100%    {transform: rotate(360deg);
+             color: black;}
+}
+.rotating{
+    animation: rotate $rotation-time;
+}
+
+body{
+    background-image: url(/asset/media/img/Imgur.gif);
+    background-position: center;
+    height: 90vh;
+    padding:0;
+    margin:0;
+}
+h1{
+    text-align: center;
+    font-size: 6rem;
+}
+#counter{
+    margin: auto;
+    width: 20vw;
+    height: 20vh;
+    text-align: center;
+    line-height: 20vh;
+    font-size: 10rem;
+    margin-bottom: 10px;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+}
+.btn{
+    font-size: 8rem;
+    text-align: center;
+    line-height: 8vh;
+    width: 20vw;
+}
+#opNum{
+    width: 20vw;
+    height: 20vh;
+    text-align: center;
+    line-height: 20vh;
+    font-size: 5rem;
+}
+#reset{
+    font-size: 3rem;
+    padding: 1rem;
+}
+#plus{
+    color: $plus-font-color;
+}
+#minus{
+    color: $minus-font-color
+}
+input, .btn{
+    border-radius: 75px;
+    border: 1px solid #d1d1d1;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/asset/media/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/asset/media/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/asset/media/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/asset/media/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/asset/media/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/asset/media/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/asset/media/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/asset/media/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/asset/media/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/asset/media/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/asset/media/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/asset/media/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/asset/media/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/asset/media/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/asset/media/img/favicon/ms-icon-144x144.png">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="asset\css\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Counter</title>
+</head>
+<body>
+    <!-- Counter con bottoni +, - e reset. Opzionale: Customizzare il valore del counter con input (come sul video tutorial) e input per scegliere di quanto aumentare -->
+    <h1>Minimal Counter</h1>
+    <!-- Counter -->
+    <div class="container">
+        <input id="counter" type="number" value="0" min="-99" max="99" oninput="checkValueByElem(this)" onclick="select()">
+    </div>
+
+    <!-- Functions -->
+    <!-- #1 Row -->
+    <div class="container">
+        <button id="minus" class="btn" data-op="-">-</button>
+        <input id="opNum" type="number" value="1" min="1" max="99" oninput="checkValueByElem(this)" onclick="select()">
+        <button id="plus" class="btn" data-op="+">+</button>
+    </div>
+    <!-- #2 Row -->
+    <div class="container"\>
+        <button id="reset" class="btn" data-op="reset">Reset <i class="fa fa-thin fa-circle-notch"></i></button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="asset\js\script.js"></script>
+</body>
+</html>

@@ -1,1 +1,2 @@
-# Project-2-Counter
+# Project-JS-Basics
+JS project in its basic form
