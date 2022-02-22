@@ -10,7 +10,8 @@
 ## Descrizione
 Questo progetto è il risultato dello studio fatto sulle fonti fornite da 🚀Start2Impact🚀.
 
-> ### Consegna: Creazione di un contatore con bottoni +/-.
+> ### Consegna: 
+> Creazione di un contatore con bottoni +/-.
 
 > ### Aggiunte:
 > - Aggiunta bottone "Reset".
