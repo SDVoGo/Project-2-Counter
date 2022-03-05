@@ -1,24 +1,25 @@
-//Add EventListeners
-minus.addEventListener("click", () => changeValue(minus.dataset.op));
-plus.addEventListener("click", () => changeValue(plus.dataset.op));
-reset.addEventListener("click", () => changeValue(reset.dataset.op));
+document.getElementById("menuR1").innerHTML = '<button id="minus" class="btn" data-op="-">-</button> \
+<input id="number" type="number" value="1" min="1" max="99"> \
+<button id="plus" class="btn">+</button>';
 
-function changeValue(operator){
-    let res;
-    switch (operator) {
-        case "+":
-            res = parseInt(counter.value) + parseInt(opNum.value);
-            break;
-        case "-":
-            res = parseInt(counter.value) - parseInt(opNum.value);
-            break;
-        case "reset":
-            rotate(reset.querySelector("i"));
-            res = 0;
-            opNum.value = 1;
-    }
+//Add EventListeners
+// Basics
+minus.addEventListener("click", () => subNumber());
+plus.addEventListener("click", () => addNumber());
+document.getElementById("reset").addEventListener("click", () => reset());
+// Checks
+number.addEventListener("input", () => checkValueByElem(number));
+
+function addNumber(){
+    let res = parseInt(counter.value) + parseInt(number.value);
     counter.value = checkValueByNum(res);
 }
+
+function subNumber() {
+    let res = parseInt(counter.value) - parseInt(number.value);
+    counter.value = checkValueByNum(res);
+}
+
 
 function checkValueByNum(n){
     let min = -99;
@@ -49,18 +50,13 @@ function checkValueByElem(elem){
 
 //rotate 'loading' icon adding class on element and removing it at the end
 function rotate(elem) {
-    let deg = 0;
     elem.classList.add("rotating");
     setTimeout(() => {elem.classList.remove("rotating")}, 3000);
 }
-let items = null;
-function pino(){
-    if(items == null)
-        items = document.querySelectorAll(".border-debug");
-    for(let item of items){
-        if (item.classList.contains("border-debug"))
-            item.classList.remove("border-debug");
-        else
-            item.classList.add("border-debug");
-    }
+
+function reset(){
+    let btnReset = document.getElementById("reset");
+    rotate(btnReset.querySelector("i"));
+    counter.value = 0;
+    number.value = 1;
 }
