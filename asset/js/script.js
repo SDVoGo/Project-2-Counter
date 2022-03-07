@@ -1,6 +1,25 @@
-document.getElementById("menuR1").innerHTML = '<button id="minus" class="btn" data-op="-">-</button> \
-<input id="number" type="number" value="1" min="1" max="99"> \
-<button id="plus" class="btn">+</button>';
+//Elements Creation
+let btnMinus = document.createElement("button");
+btnMinus.setAttribute("id", "minus");
+btnMinus.setAttribute("class", "btn");
+btnMinus.innerText = "-";
+
+let btnPlus = document.createElement("button");
+btnPlus.setAttribute("id", "plus");
+btnPlus.setAttribute("class", "btn");
+btnPlus.innerText = "+";
+
+let inpNum = document.createElement("input");
+inpNum.setAttribute("id", "number");
+inpNum.setAttribute("type", "number");
+inpNum.setAttribute("value", "1");
+inpNum.setAttribute("min", "1");
+inpNum.setAttribute("max", "99");
+
+//Insert in DOM
+menuR1.appendChild(btnMinus);
+menuR1.appendChild(inpNum);
+menuR1.appendChild(btnPlus);
 
 //Add EventListeners
 // Basics
